@@ -14,9 +14,7 @@ except:
 try:
     cdll = CDLL("build/libFrenetOptimalTrajectory.so")
 except:
-    cdll = CDLL("{}/dependencies/frenet_optimal_trajectory_planner/"
-                "build/libFrenetOptimalTrajectory.so".format(
-                    os.getenv("PYLOT_HOME")))
+    cdll = CDLL("/usr/local/lib/libFrenetOptimalTrajectory.so")
 
 _c_double_p = POINTER(c_double)
 
